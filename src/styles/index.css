@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--salt-text-fontFamily, "Open Sans", sans-serif);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Page section headings */
+.page-section {
+  margin-bottom: var(--salt-spacing-400);
+}
+
+.page-section__title {
+  font-size: var(--salt-text-h2-fontSize);
+  font-weight: var(--salt-text-h2-fontWeight);
+  color: var(--salt-content-primary-foreground);
+  margin: 0 0 var(--salt-spacing-200) 0;
+}
+
+.page-section__subtitle {
+  font-size: var(--salt-text-notation-fontSize);
+  color: var(--salt-content-secondary-foreground);
+  margin: 0 0 var(--salt-spacing-300) 0;
+}
+
+/* Demo card grid */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--salt-spacing-300);
+}
+
+.demo-card {
+  padding: var(--salt-spacing-300);
+  border: var(--salt-separable-primary-borderStyle)
+    var(--salt-separable-primary-borderWidth)
+    var(--salt-separable-primary-borderColor);
+  border-radius: var(--salt-palette-corner-weak);
+  background: var(--salt-container-secondary-background);
+}
+
+.demo-card__title {
+  font-size: var(--salt-text-label-fontSize);
+  font-weight: var(--salt-text-label-fontWeight);
+  color: var(--salt-content-primary-foreground);
+  margin: 0 0 var(--salt-spacing-200) 0;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--salt-spacing-200);
+  align-items: center;
+}
