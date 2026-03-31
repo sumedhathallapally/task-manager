@@ -13,17 +13,16 @@ import "@fontsource/open-sans/800-italic.css";
 import "@fontsource/pt-mono";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
+import { App } from "./App";
 import "@salt-ds/theme/index.css";
 import "@salt-ds/theme/css/theme-next.css";
 import "./styles/index.css";
-import { SaltProvider, SaltProviderNext } from "@salt-ds/core";
+import { SaltProviderNext } from "@salt-ds/core";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <SaltProviderNext corner="rounded">
-      <RouterProvider router={router} />
+      <App />
     </SaltProviderNext>
   </StrictMode>
 );
