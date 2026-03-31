@@ -18,9 +18,12 @@ import { router } from "./router";
 import "@salt-ds/theme/index.css";
 import "@salt-ds/theme/css/theme-next.css";
 import "./styles/index.css";
+import { SaltProvider, SaltProviderNext } from "@salt-ds/core";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <SaltProviderNext corner="rounded">
+      <RouterProvider router={router} />
+    </SaltProviderNext>
   </StrictMode>
 );
